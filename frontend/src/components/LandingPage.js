@@ -6,33 +6,16 @@ function LandingPage({randomRecipe}){
     console.log(randomRecipe)
  
 
-  const newVariable = <img src={randomRecipe.image}/>
-
-
-
-// const image = randomRecipe.map((info)=> {
-// return (
-// <img src={info.image}/>
-//     )})
-
-
-
-    
-   
-
-    
-// let image = randomRecipe.map((info)=> {
-//    return ( 
-//    <img src={info.image}/>
-//     )
-
-// })
+ 
 
 
 return (
     <>
-    <h1> HOWDY </h1>
- {newVariable}
+    <h1> HOWDY </h1> 
+<h2>{randomRecipe.title}</h2>
+<img src={randomRecipe.image}/>
+<button><a href={randomRecipe.sourceUrl}>Cook This</a></button>
+ 
 
     </>
 )
