@@ -1,31 +1,28 @@
+import React, { useState, useEffect } from 'react'
 import './App.css';
 import LandingPage from './components/LandingPage';
-import React, { useEffect, useState } from 'react';
-import Navbar from './components/Navbar';
-
+import Recipes from './components/Recipes';
+import Navbar from './components/Navbar'
+import {Switch, Route} from 'react-router-dom'
 
 function App() {
-  
-//   const [randomRecipe, setRandomRecipe] = useState([])
+  const [recipes, setRecipes] = useState([])
 
-//   useEffect(()=> {
-//     fetch('https://api.spoonacular.com/recipes/random?number=1&apiKey=0e62ad5621ab4dddad3ee6e791fc9d6b')
-//     .then(resp => resp.json())
-//     .then(data => console.log(data))
-// },[])
+  useEffect(() => {
+    fetch('http://localhost:3000/recipes')
+    .then(res => res.json())
+    .then(setRecipes)
+  }, [])
 
-
-
-  
-  
   return (
     <div className="App">
-      <Navbar />
-      {/* <LandingPage randomRecipe={randomRecipe}/> */}
-      <LandingPage />
+      <Navbar/>
+      <Route exact path='/'><LandingPage/></Route>
+      <Route exact path='/recipes'><Recipes recipes={recipes} /></Route>
     </div>
   );
 }
 
 export default App;
+
 
