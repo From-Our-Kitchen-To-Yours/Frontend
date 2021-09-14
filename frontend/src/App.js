@@ -21,7 +21,7 @@ function App() {
       <Navbar />
   <Switch>
         <Route path='/recipes/:id'>
-          <RecipeDetails />
+          <RecipeDetails recipes={recipes}/>
         </Route> 
         <Route exact path='/recipes'>
           <Recipes recipes={recipes} />

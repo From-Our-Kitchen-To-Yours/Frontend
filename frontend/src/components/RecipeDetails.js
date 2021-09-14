@@ -3,6 +3,7 @@ import { useParams, useHistory, Link } from 'react-router-dom';
 
 function RecipeDetails() {
     const [recipe, setRecipe] = useState(null)
+   
     const history = useHistory();
     const { id } = useParams();
    console.log(id)
@@ -12,9 +13,11 @@ function RecipeDetails() {
           .then((r) => r.json())
           .then((recipeInfo) => {
             setRecipe(recipeInfo);
+            console.log(recipeInfo)
           });
       }, [id]);
 
+      const { title, image } = recipe
 
     
   
@@ -27,13 +30,14 @@ return (
         <button className="likes">LIKE ME</button>
     </div>
         <div className="details">
-            <h2>THIS IS WHERE THE NAME IS</h2>
+            <h2>{title}</h2>
             <p>these are the details!!</p>
         </div>
         <br />
-        <Link onClick={()=> history.push('/recipes')}>
+        {/* <Link onClick={()=> history.push('/recipes')}>
             Go Back
-        </Link>
+        </Link> */}
+
     </div>
     </section>
     )
