@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import AllRecipes from './AllRecipes';
-///THIS LINK IMPORT IS NOT WORKING
-// import { Link } from 'react-router-dom';
 
-function LandingPage({randomRecipe}){
+///THIS LINK IMPORT IS NOT WORKING
+import { Link } from 'react-router-dom';
+
+function LandingPage(){
     // console.log(randomRecipe)
 return (
     <div className="container">
@@ -21,7 +21,7 @@ return (
             <br/>
             {/* <button><a href={randomRecipe.sourceUrl}>Cook This Meal</a></button> */}
             {/* LINK IS SOMETHING LIKE THAT BUT DOESNT WORK YET */}
-            <Link to={'./components/AllRecipes'}>See Our Recipes</Link>
+            <Link to={'/recipes'}><button>See Our Recipes</button></Link>
         </div>
     </div>
 )
