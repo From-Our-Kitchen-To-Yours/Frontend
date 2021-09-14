@@ -21,7 +21,7 @@ return (
             <br/>
             {/* <button><a href={randomRecipe.sourceUrl}>Cook This Meal</a></button> */}
             {/* LINK IS SOMETHING LIKE THAT BUT DOESNT WORK YET */}
-            <Link to={'/recipes'}><button>See Our Recipes</button></Link>
+            <Link to={'/recipes'}>See Our Recipes</Link>
         </div>
     </div>
 )

@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
-import {Link} from 'react-router-dom'
-import RecipeDetails from './RecipeDetails'
+import { Link } from 'react-router-dom'
 
-function RecipeCard({id, title, vegan, vegetarian}) {
 
+function RecipeCard({title, vegan, vegetarian, id}) {
 
     return (
         <div>
-            <Link to={`/recipes/${id}`}>{title}</Link>
+            {title}
+            <Link to={`/recipes/${id}`}>View Details</Link>
             {vegan ? <p>Vegan: ✔️</p> : <p>Vegan: ❌</p>}
             {vegetarian ? <p>Vegetarian: ✔️</p> : <p>Vegetarian: ❌</p>}
         </div>

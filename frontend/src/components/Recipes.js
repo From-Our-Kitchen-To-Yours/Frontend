@@ -2,7 +2,7 @@ import React from 'react'
 import RecipeCard from './RecipeCard';
 
 function Recipes({recipes}) {
-console.log(recipes);
+// console.log(recipes);
     const recipeList = recipes.map((recipe) => (
         <RecipeCard key={recipe.id}
             id={recipe.id}

@@ -1,13 +1,42 @@
-// import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
+import { useParams, useHistory, Link } from 'react-router-dom';
 
-// function RecipeDetails({ recipes }) {
-//     const [recipes, setRecipes] = useState([])
+function RecipeDetails() {
+    const [recipe, setRecipe] = useState(null)
+    const history = useHistory();
+    const { id } = useParams();
+   console.log(id)
+
+    useEffect(() => {
+        fetch(`http://localhost:3000/recipes/${id}`)
+          .then((r) => r.json())
+          .then((recipeInfo) => {
+            setRecipe(recipeInfo);
+          });
+      }, [id]);
 
 
     
-//     return (
-//         <h1>{title}</h1>
-//     )
-// }
+  
+    
+return (
+    <section>
+        <div className="recipe-details-box">
+        <div className = "recipe-image">
+        <h1>HELLO</h1>
+        <button className="likes">LIKE ME</button>
+    </div>
+        <div className="details">
+            <h2>THIS IS WHERE THE NAME IS</h2>
+            <p>these are the details!!</p>
+        </div>
+        <br />
+        <Link onClick={()=> history.push('/recipes')}>
+            Go Back
+        </Link>
+    </div>
+    </section>
+    )
+}
 
-// export default RecipeDetails
+export default RecipeDetails
