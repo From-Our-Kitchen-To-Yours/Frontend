@@ -4,7 +4,7 @@ import LandingPage from './components/LandingPage';
 import Recipes from './components/Recipes';
 import RecipeDetails from './components/RecipeDetails';
 import Navbar from './components/Navbar'
-import BlogForm from './components/BlogForm'
+import Reviews from './components/Reviews'
 import {Switch, Route} from 'react-router-dom'
 
 function App() {
@@ -31,8 +31,8 @@ function App() {
       <Route exact path='/recipes'>
         <Recipes recipes={searchList} search={search} setSearch={setSearch}/>
       </Route>
-      <Route path='/blogs'>
-        < BlogForm /> 
+      <Route path='/reviews'>
+        < Reviews /> 
         </Route>
       <Route exact path='/'>
           <LandingPage />

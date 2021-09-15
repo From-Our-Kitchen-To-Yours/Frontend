@@ -2,14 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { v4 as uuid } from "uuid";
 
-function BlogForm() {
+function Reviews() {
     const [blogPage, setBlogPage] = useState([])
     const [name, setUserName] = useState("");
     const [image, setUserImage] = useState("");
     const [blogText, setBlogText] = useState("");
 
     useEffect(()=> {
-        fetch('http://localhost:3000/blogs')
+        fetch('http://localhost:3000/reviews')
         .then((r)=> r.json())
         .then(data => {
             setBlogPage(data)
@@ -25,7 +25,7 @@ function BlogForm() {
             image,
             blogText,
         }
-        fetch('http://localhost:3000/blogs',{
+        fetch('http://localhost:3000/reviews',{
             method: "POST",
             headers: {
                 "Content-Type" : "application/json"
@@ -72,4 +72,4 @@ function BlogForm() {
     );
 }
 
-export default BlogForm;
+export default Reviews;
