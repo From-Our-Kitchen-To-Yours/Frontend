@@ -47,9 +47,11 @@ table {
 }
 
 .navbar {
-  height: 100vh;
+  min-height: 100vw;
+  max-height: 120vw;
   background-color: #982121;
-  width: 408px;
+  min-width: 20%;
+  max-width: 20%;
 }
 
 .navbar ul {
@@ -127,3 +129,153 @@ table {
   font-size: 24px;
 }
 
+.random button:hover {
+  cursor: pointer;
+}
+
+.top-bar {
+  display: flex;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  justify-content: space-between;
+  width: 80vw;
+  border-bottom: 1px solid black;
+}
+
+.top-bar h1 {
+  font-size: 48px;
+  font-style: italic;
+  font-weight: bold;
+  margin-left: 8%;
+}
+
+.top-bar h1 span {
+  margin-left: 48%;
+}
+
+.top-bar h4 {
+  margin-right: 35%;
+  margin-top: 7.5%;
+  font-size: 24px;
+  font-style: italic;
+}
+
+.recipes {
+  display: flex;
+  margin-left: 8%;
+  margin-bottom: 2%;
+  font-size: 18px;
+  border-bottom: 1px dotted black;
+  margin-right: 8%;
+}
+
+.recipes h4 {
+  width: 220px
+}
+
+.recipes p {
+  margin-left: 20%;
+}
+
+.recipes button {
+  width: 171px;
+  height: 34px;
+  color:#FFB80E;
+  background-color: #982121;
+  border-radius: 6px;
+  margin-left: 10%;
+  font-size: 22px;
+  margin-bottom: 1%;
+}
+
+.recipes button:hover {
+  cursor: pointer;
+}
+
+.search-bar {
+  margin-left: 8%;
+  margin-bottom: 2%;
+}
+
+.search-bar input {
+  width: 30%;
+  border: none;
+  border-bottom: 1px solid black;
+  font-style: italic;
+  font-size: 18px;
+}
+
+.search-bar input:focus {
+  outline: none;
+}
+
+.button button {
+  width: 171px;
+  height: 34px;
+  color:#FFB80E;
+  background-color: #982121;
+  border-radius: 6px;
+  margin-left: 8%;
+  font-size: 18px;
+  margin-bottom: 1%;
+}
+
+.button button:hover {
+  cursor: pointer;
+}
+
+.details-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.image-container {
+  float: right;
+  margin-right: 8%;
+}
+
+
+.details h4 {
+  font-size: 26px;
+  font-style: italic;
+  margin-left: 8%;
+  margin-top: 2%;
+  margin-bottom: 4%;
+}
+
+.details h3 {
+  font-size: 26px;
+  font-style: italic;
+  margin-left: 8%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.details h5 {
+  font-size: 26px;
+  font-style: italic;
+  margin-left: 8%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.details ol {
+  margin-left: 8%;
+  margin-bottom: 6%;
+}
+
+.ingredients li {
+  margin-bottom: 1%;
+}
+
+.steps li {
+  font-size: 24px;
+  width: 80%;
+  margin-bottom: 1%;
+}
+
+.blog-post-textbox {
+  background-color: white;
+  padding: 50px;
+  margin-top: 20px;
+}

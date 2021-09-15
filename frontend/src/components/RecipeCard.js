@@ -1,15 +1,17 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import {Link} from 'react-router-dom'
+import RecipeDetails from './RecipeDetails'
+import '../App.css'
 
+function RecipeCard({id, title, vegan, vegetarian}) {
 
-function RecipeCard({title, vegan, vegetarian, id}) {
 
     return (
-        <div>
-            {title}
-            <Link to={`/recipes/${id}`}>View Details</Link>
+        <div className="recipes">
+            <h4>{title}</h4>
             {vegan ? <p>Vegan: ✔️</p> : <p>Vegan: ❌</p>}
             {vegetarian ? <p>Vegetarian: ✔️</p> : <p>Vegetarian: ❌</p>}
+            <Link to={`/recipes/${id}`}><button>Cook This</button></Link>
         </div>
     )
 }
