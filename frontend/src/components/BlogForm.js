@@ -61,7 +61,7 @@ function BlogForm() {
             </div>
             <br/> <br/>
             <form onSubmit={handleSubmit} className="form">
-                <h3> Share Your Story!</h3>
+                <h3> Let Us Know What You Think!</h3>
                 <input type="text" placeholder="Your Name" value={name} onChange={(e)=> setUserName(e.target.value)}/> <br/>
                 <input type="text" name="image" placeholder="Insert Image" value={image} onChange={(e)=> setUserImage(e.target.value)}/> <br/>
                 <input className='blog-post-textbox' type="text" placeholder="...Your Story Here" value={blogText} onChange={(e)=> setBlogText(e.target.value)} rows={10}/><br/>
