@@ -48,6 +48,18 @@ function Reviews() {
          </div>
         )
      })
+
+    //  function handleEditPost(blog){
+    //      fetch(`http://localhost:3000/reviews/${blog.id}`,{
+    //          method: "PATCH",
+    //          headers: {
+    //              "Content-Type": "application/json"
+    //          },
+    //          body: JSON.stringify({blogText: "WHAT NEEDS TO BE UPDATED"})
+    //      })
+    //          .then(r=> r.json())
+    //          .then(data => console.log(data.blogText))
+    //  }
     
 
     return (

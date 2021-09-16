@@ -1,14 +1,17 @@
 import React from 'react'
 import RecipeCard from './RecipeCard';
 import { Link } from 'react-router-dom';
-function Recipes({recipes, search, setSearch}) {
+function Recipes({recipes, search, setSearch,handleFavoriteButton}) {
 console.log(recipes);
     const recipeList = recipes.map((recipe) => (
         <RecipeCard key={recipe.id}
             id={recipe.id}
             title={recipe.title} 
             vegan={recipe.vegan}
-            vegetarian={recipe.vegetarian}    
+            vegetarian={recipe.vegetarian} 
+            liked={recipe.liked} 
+            handleFavoriteButton={handleFavoriteButton} 
+            recipe={recipe} 
         />
     ))
     return (

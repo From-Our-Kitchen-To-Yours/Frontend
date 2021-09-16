@@ -10,16 +10,28 @@ import {Switch, Route} from 'react-router-dom'
 function App() {
   const [recipes, setRecipes] = useState([])
   const [search, setSearch] = useState('')
+  const [ issueRequest, setIssueRequest ] = useState(false)
 
   useEffect(() => {
     fetch('http://localhost:3000/recipes')
     .then(res => res.json())
     .then(setRecipes)
-  }, [])
+  }, [issueRequest])
 
   const searchList = recipes.filter((recipe) => {
    return recipe.title.toLowerCase().includes(search.toLowerCase())
   })
+
+    function handleFavoriteButton(recipe){
+         fetch(`http://localhost:3000/recipes/${recipe.id}`,{
+             method: "PATCH",
+             headers: {
+                 "Content-Type": "application/json"
+             },
+             body: JSON.stringify({liked: !recipe.liked})
+         })
+             .then( setIssueRequest(!issueRequest))
+     }
 
   return (
     <div className="App">
@@ -29,7 +41,7 @@ function App() {
         <RecipeDetails recipes={searchList}/>
       </Route> 
       <Route exact path='/recipes'>
-        <Recipes recipes={searchList} search={search} setSearch={setSearch}/>
+        <Recipes recipes={searchList} search={search} setSearch={setSearch} handleFavoriteButton={handleFavoriteButton}/>
       </Route>
       <Route path='/reviews'>
         < Reviews /> 
