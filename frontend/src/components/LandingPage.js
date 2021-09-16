@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-
-///THIS LINK IMPORT IS NOT WORKING
 import { Link } from 'react-router-dom';
 
 function LandingPage(){
