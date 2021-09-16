@@ -274,13 +274,13 @@ table {
   margin-bottom: 1%;
 }
 
-.blog-post-textbox {
+.review-post-textbox {
   background-color: white;
   padding: 50px;
   margin-top: 20px;
 }
 
-.blog-card{
+.review-card{
   
     border: solid;
     border-color: #ffcb05;
@@ -297,15 +297,15 @@ table {
   
 }
 
-.blog-card:hover{
+.review-card:hover{
   background-color:#FFF8DC ;
 }
 
-.blog-card-image {
+.review-card-image {
   height: 75px;
   width: 75px;
 }
-.blog-card-name{
+.review-card-name{
  font-size: 15px;
  top:0%;
 }

@@ -44,7 +44,7 @@ function App() {
         <Recipes recipes={searchList} search={search} setSearch={setSearch} handleFavoriteButton={handleFavoriteButton}/>
       </Route>
       <Route path='/reviews'>
-        < Reviews /> 
+        < Reviews issueRequest={issueRequest} setIssueRequest={setIssueRequest}/> 
         </Route>
       <Route exact path='/'>
           <LandingPage />
