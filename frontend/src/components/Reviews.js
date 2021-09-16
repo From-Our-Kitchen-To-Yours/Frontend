@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { v4 as uuid } from "uuid";
 
-function Reviews({setIssueRequest, issueRequest}) {
+function Reviews() {
     const [reviewPage, setReviewPage] = useState([])
     const [name, setUserName] = useState("");
     const [image, setUserImage] = useState("");
     const [reviewText, setReviewText] = useState("");
-
+    const [refreshPage, setRefreshPage] = useState(false)
     useEffect(()=> {
         fetch('http://localhost:3000/reviews')
         .then((r)=> r.json())
@@ -15,7 +15,7 @@ function Reviews({setIssueRequest, issueRequest}) {
             setReviewPage(data)
             console.log(data)
         })
-    },[])
+    },[refreshPage])
 
     function handleSubmit(event){
         event.preventDefault()
@@ -69,7 +69,7 @@ function Reviews({setIssueRequest, issueRequest}) {
                 "Content-Type": "application/json"
             }
         }). then(
-            setIssueRequest(!issueRequest)
+            setRefreshPage(!refreshPage)
         )
     }
 
