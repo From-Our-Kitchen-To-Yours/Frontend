@@ -10,7 +10,7 @@ function RecipeDetails() {
     const { id }  = useParams();
 //    console.log(id)
     useEffect(() => {
-        fetch(`http://localhost:3000/recipes/${id}`)
+        fetch(`https://fokty-backend.herokuapp.com/recipes/${id}`)
           .then((r) => r.json())
           .then((recipe) => {
             setRecipe(recipe);
