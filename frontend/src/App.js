@@ -5,6 +5,7 @@ import Recipes from './components/Recipes';
 import RecipeDetails from './components/RecipeDetails';
 import Navbar from './components/Navbar'
 import Reviews from './components/Reviews'
+import AddReview from './components/AddReview';
 import {Switch, Route} from 'react-router-dom'
 
 function App() {
@@ -22,16 +23,16 @@ function App() {
    return recipe.title.toLowerCase().includes(search.toLowerCase())
   })
 
-    function handleFavoriteButton(recipe){
-         fetch(`http://localhost:3000/recipes/${recipe.id}`,{
-             method: "PATCH",
-             headers: {
-                 "Content-Type": "application/json"
-             },
-             body: JSON.stringify({liked: !recipe.liked})
-         })
-             .then( setIssueRequest(!issueRequest))
-     }
+  function handleFavoriteButton(recipe){
+        fetch(`http://localhost:3000/recipes/${recipe.id}`,{
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({liked: !recipe.liked})
+        })
+            .then( setIssueRequest(!issueRequest))
+    }
 
   return (
     <div className="App">
@@ -42,6 +43,9 @@ function App() {
       </Route> 
       <Route exact path='/recipes'>
         <Recipes recipes={searchList} search={search} setSearch={setSearch} handleFavoriteButton={handleFavoriteButton}/>
+      </Route>
+      <Route path='/reviews/add'>
+        <AddReview />
       </Route>
       <Route path='/reviews'>
         < Reviews /> 
