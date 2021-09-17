@@ -47,8 +47,7 @@ table {
 }
 
 .navbar {
-  min-height: 100vw;
-  max-height: 120vw;
+  min-height: 100vh;
   background-color: #982121;
   min-width: 20%;
   max-width: 20%;
@@ -162,7 +161,7 @@ table {
 
 .recipes {
   display: flex;
-  margin-left: 8%;
+  margin-left: 2%;
   margin-bottom: 2%;
   font-size: 18px;
   border-bottom: 1px dotted black;
@@ -272,4 +271,150 @@ table {
   font-size: 24px;
   width: 80%;
   margin-bottom: 1%;
+}
+
+.blog-list {
+  display: flex;
+}
+
+.review-card{
+    border: 1px solid black;
+    width: 20%;
+    height: 300px;
+    margin-left: 8%;
+    border-radius: 6px;
+    text-align: center;
+    background-color: #FFB80E;
+    font-style: italic;
+  }
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+
+/* .review-card:hover{
+  background-color:#FFF8DC ;
+} */
+
+.review-card-image {
+  height: 140px;
+  width: 96%;
+  padding-top: 4%;
+  padding-bottom: 4%;
+}
+.review-card-name{
+ font-size: 16px;
+ float: left;
+ margin-left: 4%;
+ margin-top: -4%;
+}
+
+/* .form{
+  font-family: inherit;
+  display:grid;
+  position: relative;
+  top: 400px; 
+} */
+
+.edit-button{
+  color: #982121;
+  font-size: 20px;
+  float: right;
+  margin-right: 1%;
+  font-style: normal;
+}
+.edit-button:hover{
+  cursor:pointer;
+}
+
+
+#favorite-button{
+  margin-left: 0px;
+  padding: 0;
+  border: none;
+  background: none;
+  font-size: 25px;
+}
+
+.review-button {
+  width: 171px;
+  height: 34px;
+  color:#FFB80E;
+  background-color: #982121;
+  border-radius: 6px;
+  margin-left: 8%;
+  font-size: 18px;
+  margin-bottom: 1%;
+}
+
+.review-button:hover {
+  cursor: pointer;
+}
+
+.review-form span {
+  font-size: 24px;
+  font-style: italic;
+}
+
+.review-form .input {
+  width: 20%;
+  border: none;
+  border-bottom: 1px solid black;
+  font-style: italic;
+  font-size: 18px;
+  margin-left: 6%;
+  margin-bottom: 2%;
+}
+
+.review-form .input:focus {
+  outline: none;
+}
+
+.review-form {
+  text-align: center;
+  margin-top: 4%;
+}
+
+.review-p {
+  margin-right: 28%;
+  font-size: 24px;
+  font-style: italic;
+  margin-top: 2%;
+}
+
+.review-post-textbox {
+  width: 37%;
+  text-align: left;
+  margin-top: 1%;
+  height: 140px;
+  resize: none;
+  font-style: italic;
+}
+
+.add-review-button {
+  width: 171px;
+  height: 34px;
+  color:#FFB80E;
+  background-color: #982121;
+  border-radius: 6px;
+  font-size: 18px;
+  margin-bottom: 1%;
+  margin-top: 2%;
+  margin-right: 15%;
+}
+
+.add-review-button:hover {
+  cursor: pointer;
+}
+
+.nevermind-button {
+  width: 171px;
+  height: 34px;
+  color:#FFB80E;
+  background-color: #982121;
+  border-radius: 6px;
+  font-size: 18px;
+  margin-bottom: 1%;
+  margin-top: 2%;
+}
+
+.nevermind-button:hover {
+  cursor: pointer;
 }

@@ -7,7 +7,7 @@ function Navbar() {
             <ul>
                 <Link to='/' style={{ textDecoration: 'none' }}><li>Home</li></Link>
                 <Link to='/recipes' style={{ textDecoration: 'none' }}><li>Recipes</li></Link>
-                <Link to='/blogs' style={{ textDecoration: 'none' }}><li>Blog</li></Link>
+                <Link to='/reviews' style={{ textDecoration: 'none' }}><li>Reviews</li></Link>
             </ul>
         </div>
     )

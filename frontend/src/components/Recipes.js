@@ -1,14 +1,17 @@
 import React from 'react'
 import RecipeCard from './RecipeCard';
-
-function Recipes({recipes, search, setSearch}) {
+import { Link } from 'react-router-dom';
+function Recipes({recipes, search, setSearch,handleFavoriteButton}) {
 console.log(recipes);
     const recipeList = recipes.map((recipe) => (
         <RecipeCard key={recipe.id}
             id={recipe.id}
             title={recipe.title} 
             vegan={recipe.vegan}
-            vegetarian={recipe.vegetarian}    
+            vegetarian={recipe.vegetarian} 
+            liked={recipe.liked} 
+            handleFavoriteButton={handleFavoriteButton} 
+            recipe={recipe} 
         />
     ))
     return (
@@ -24,6 +27,8 @@ console.log(recipes);
                     placeholder="Search for Recipes..." 
                     onChange={(e) => setSearch(e.target.value)} 
                 />
+            
+            <Link to='/'className='button'><button>Back to Home</button></Link>
             </div>
             {recipeList}
         </div>
