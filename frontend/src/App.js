@@ -14,7 +14,7 @@ function App() {
   const [ issueRequest, setIssueRequest ] = useState(false)
 
   useEffect(() => {
-    fetch('http://localhost:3000/recipes')
+    fetch('https://fokty-backend.herokuapp.com/recipes')
     .then(res => res.json())
     .then(setRecipes)
   }, [issueRequest])
@@ -24,7 +24,7 @@ function App() {
   })
 
   function handleFavoriteButton(recipe){
-        fetch(`http://localhost:3000/recipes/${recipe.id}`,{
+        fetch(`https://fokty-backend.herokuapp.com/recipes/${recipe.id}`,{
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"

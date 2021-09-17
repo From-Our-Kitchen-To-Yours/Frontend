@@ -6,7 +6,7 @@ function Reviews() {
 
     const [refreshPage, setRefreshPage] = useState(false)
     useEffect(()=> {
-        fetch('http://localhost:3000/reviews')
+        fetch('https://fokty-backend.herokuapp.com/reviews')
         .then((r)=> r.json())
         .then(data => {
             setReviewPage(data)
@@ -40,7 +40,9 @@ function Reviews() {
             <p className="review-card-name">{review.name}</p>
             <br/>
             <h1>{review.cook}</h1>
-            <img src={review.image} className="review-card-image"/>
+            <div className='review-image'>
+                <img src={review.image} className="review-card-image"/>
+            </div>
             <br/>
             <p className="review-card-text">{review.reviewText}</p>
          </div>
@@ -74,7 +76,7 @@ function Reviews() {
     }
 
     function handleDeleteReview(review) {
-        fetch(`http://localhost:3000/reviews/${review.id}`, {
+        fetch(`https://fokty-backend.herokuapp.com/reviews/${review.id}`, {
             method: "DELETE"
         })
         handleDelete(review.id)

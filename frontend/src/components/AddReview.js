@@ -20,7 +20,7 @@ function AddReview() {
             reviewText,
             cook
         }
-        fetch('http://localhost:3000/reviews',{
+        fetch('https://fokty-backend.herokuapp.com/reviews',{
             method: "POST",
             headers: {
                 "Content-Type" : "application/json"
